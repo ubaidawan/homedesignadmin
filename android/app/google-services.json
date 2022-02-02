@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "666938215356",
+    "firebase_url": "https://home-design-app-a9263-default-rtdb.firebaseio.com",
+    "project_id": "home-design-app-a9263",
+    "storage_bucket": "home-design-app-a9263.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666938215356:android:011e0ca48e9ad23b78b9b9",
+        "android_client_info": {
+          "package_name": "com.example.homedesignadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666938215356-bdocgeqoh4ddms4hn7ip0ki3fm1k5rha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJSvhZ6-C_7a_0Aqg5bXfFLq6y5mG7v70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666938215356-bdocgeqoh4ddms4hn7ip0ki3fm1k5rha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666938215356:android:a6e4131e00cdefb878b9b9",
+        "android_client_info": {
+          "package_name": "com.voidmain.homedesignapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666938215356-bdocgeqoh4ddms4hn7ip0ki3fm1k5rha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJSvhZ6-C_7a_0Aqg5bXfFLq6y5mG7v70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666938215356-bdocgeqoh4ddms4hn7ip0ki3fm1k5rha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
