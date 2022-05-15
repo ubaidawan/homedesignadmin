@@ -7,7 +7,6 @@ import 'package:homedesignadmin/Services/Data.dart';
 import '../Global.dart';
 
 class ChooseOperation extends StatefulWidget {
-  const ChooseOperation({Key key}) : super(key: key);
 
   @override
   _ChooseOperationState createState() => _ChooseOperationState();

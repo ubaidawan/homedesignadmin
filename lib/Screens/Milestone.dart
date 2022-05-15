@@ -239,12 +239,8 @@ class _MilestoneState extends State<Milestone> {
                         ),
                         ElevatedButton.icon(
                           onPressed: () {
-                            if (!obselateindexlist.contains(index) ||
-                                obselateindexlist.isEmpty) {
-                              if (firsttaskcontroller.text.isEmpty ||
-                                  secondtaskcontroller.text.isEmpty ||
-                                  thirdtaskcontroller.text.isEmpty ||
-                                  fourthtaskcontroller.text.isEmpty) {
+                            if (!obselateindexlist.contains(index) || obselateindexlist.isEmpty) {
+                              if (firsttaskcontroller.text.isEmpty || secondtaskcontroller.text.isEmpty || thirdtaskcontroller.text.isEmpty || fourthtaskcontroller.text.isEmpty) {
                                 Fluttertoast.showToast(
                                     msg: "Required fields",
                                     toastLength: Toast.LENGTH_SHORT,

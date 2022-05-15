@@ -95,7 +95,7 @@ class _ResidentialMilestoneScreenState
             child: Padding(
               padding: const EdgeInsets.all(18.0),
               child: Container(
-                height: 700,
+                height: 1100,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
@@ -234,6 +234,7 @@ class _ResidentialMilestoneScreenState
                       ),
                       Image.network(
                         residentialrequestmodellist[index].image,
+                        fit: BoxFit.fitWidth,
                         // height: 200.0,
                         // width: 200.0,
                       ),

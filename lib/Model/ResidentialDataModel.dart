@@ -7,10 +7,11 @@ class ResidentialDataModel {
       bathroom,
       brick,
       cement,
-      cost,
+
       floor,
       hall,
-      image,
+      image1,
+  image2,
       kitchen,
   /*    milestone,
       name,*/
@@ -19,7 +20,7 @@ class ResidentialDataModel {
       sqyard,
       steel,
       stone,
-      timber,
+      wood,
       type,
   status;
 
@@ -30,10 +31,11 @@ class ResidentialDataModel {
       this.bathroom,
       this.brick,
       this.cement,
-      this.cost,
+
       this.floor,
       this.hall,
-      this.image,
+      this.image1,
+      this.image2,
       this.kitchen,
   /*    this.milestone,
       this.name,*/
@@ -42,6 +44,6 @@ class ResidentialDataModel {
       this.sqyard,
       this.steel,
       this.stone,
-      this.timber,
+      this.wood,
       this.type, this.status);
 }

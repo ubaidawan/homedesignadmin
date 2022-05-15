@@ -1,9 +1,13 @@
+import 'package:custom_dialog/custom_dialog.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:homedesignadmin/Global.dart';
+import 'package:homedesignadmin/Global.dart';
 import 'package:homedesignadmin/Screens/ChooseOperation.dart';
+import 'package:homedesignadmin/Screens/costing.dart';
 
+import '../Global.dart';
 import 'Config.dart';
 
 class Residential extends StatefulWidget {
@@ -14,7 +18,7 @@ class Residential extends StatefulWidget {
 
 class _ResidentialState extends State<Residential> {
   String reqId;
-  int position;
+
   bool _loading = true;
 
   @override
@@ -122,7 +126,7 @@ class _ResidentialState extends State<Residential> {
             child: Padding(
               padding: const EdgeInsets.all(18.0),
               child: Container(
-                height: 700,
+                height: 1200,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
@@ -144,133 +148,127 @@ class _ResidentialState extends State<Residential> {
                             top: 8.0, left: 20.0, right: 20.0, bottom: 8.0),
                         child: Center(
                           child: Text(
-                              'SQ Yard :${residentialmodellist[index].sqyard}'),
+                              'SQ Yard :${residentialmodellist[index].sqyard}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22),),
                         ),
                       ),
+                      Divider(),
                       Padding(
                         padding: const EdgeInsets.only(
                             left: 20.0, right: 20.0, bottom: 8.0),
                         child: Center(
                           child: Text(
-                              'Request Token :${residentialmodellist[index].uid}'),
+                              'Request Token :${residentialmodellist[index].uid}',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.cyan,fontSize: 16),),
                         ),
                       ),
+                      Divider(),
                       //     style: TextSize_SqYard),
                       Row(
                         children: [
-                          Text('Rooms'),
+                          Text('Rooms',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].room),
+                          Text(residentialmodellist[index].room,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Bathroom'),
+                          Text('Bathroom',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].bathroom),
+                          Text(residentialmodellist[index].bathroom,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Kitchen'),
+                          Text('Kitchen',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].kitchen),
+                          Text(residentialmodellist[index].kitchen,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Hall'),
+                          Text('Hall',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].hall),
+                          Text(residentialmodellist[index].hall,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Padding(padding: EdgeInsets.all(20.0)),
+                      Divider(),
                       Center(
                         child: Text(
                           'Construction Cost',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: 22),
                         ),
                       ),
+                      Divider(),
                       Padding(padding: EdgeInsets.all(20.0)),
                       Row(
                         children: [
-                          Text('Floor'),
+                          Text('Floor',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].floor),
+                          Text(residentialmodellist[index].floor,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Aluminium'),
+                          Text('Aluminium',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].aluminium),
+                          Text(residentialmodellist[index].aluminium,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Bricks'),
+                          Text('Bricks',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].brick),
+                          Text(residentialmodellist[index].brick,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Cement'),
+                          Text('Cement',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].cement),
+                          Text(residentialmodellist[index].cement,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Sand'),
+                          Text('Sand',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].sand),
+                          Text(residentialmodellist[index].sand,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Steel'),
+                          Text('Steel',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].steel),
+                          Text(residentialmodellist[index].steel,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Stone'),
+                          Text('Stone',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].stone),
+                          Text(residentialmodellist[index].stone,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Timber'),
+                          Text('Wood',style: TextStyle(fontWeight: FontWeight.bold),),
                           Spacer(),
-                          Text(residentialmodellist[index].timber),
+                          Text(residentialmodellist[index].wood,style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Text('Cost'),
-                          Spacer(),
-                          Text(residentialmodellist[index].cost),
-                        ],
-                      ),
-
-                      Image.network(
-                        residentialmodellist[index].image,
-                        height: 200.0,
-                        width: 200.0,
-                      ),
-
-                      Spacer(),
+                      Divider(),
+                      Image.asset(residentialmodellist[index].image1),
+                      Divider(),
+                      Image.asset(residentialmodellist[index].image2),
+                      Divider(),
                       Row(
                         children: [
                           InkWell(
                             onTap: () async {
-                              reqId = residentialmodellist[index].uid;
                               position = index;
-                              await acceptRequest();
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(builder: (BuildContext context) => Costing()));
                             },
                             child: Container(
                               height: 50,
@@ -349,20 +347,39 @@ class _ResidentialState extends State<Residential> {
   acceptRequest() async {
     DatabaseReference reference = await FirebaseDatabase().reference().child("Requests").child(reqId);
         reference.update({
-    'status':'accept',
+    'status':'accepted',
     }).whenComplete(() {
-      residentialmodellist[position].status = "accept";
-          Fluttertoast.showToast(
-              msg: " ${reqId} Accepted",
-              toastLength: Toast.LENGTH_SHORT,
-              gravity: ToastGravity.CENTER,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Colors.green,
-              textColor: Colors.white,
-              fontSize: 16.0);
-
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (BuildContext context) => ChooseOperation()));
+      // residentialmodellist[position].status = "accept";
+      //     Fluttertoast.showToast(
+      //         msg: " ${reqId} Accepted",
+      //         toastLength: Toast.LENGTH_SHORT,
+      //         gravity: ToastGravity.CENTER,
+      //         timeInSecForIosWeb: 1,
+      //         backgroundColor: Colors.green,
+      //         textColor: Colors.white,
+      //         fontSize: 16.0);
+          showDialog(
+            context: context,
+            builder: (context) => CustomDialog(
+              content: Text(
+                'Accepted',
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 20.0,
+                ),
+              ),
+              title: Text(''),
+              firstColor: Color(0xFF80DEEA),
+              secondColor: Colors.white,
+              headerIcon: Icon(
+                Icons.check_circle_outline,
+                size: 120.0,
+                color: Colors.white,
+              ),
+            ),
+          );
+      // Navigator.of(context).pushReplacement(
+      //     MaterialPageRoute(builder: (BuildContext context) => ChooseOperation()));
     });
 
   }

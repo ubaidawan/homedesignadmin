@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:homedesignadmin/Screens/ChooseOperation.dart';
 import 'package:homedesignadmin/Screens/Signup.dart';
+import 'package:homedesignadmin/Screens/navbar.dart';
 import 'package:homedesignadmin/Widget/Header.dart';
 
 import '../global.dart';
@@ -25,7 +26,7 @@ class _LoginState extends State<Login> {
       password = _password.text;
       if(email == "admin@gmail.com" && password == "admin"){
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => ChooseOperation()));
+            MaterialPageRoute(builder: (BuildContext context) => BottomNavbar()));
       }else{
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text('Something went wrongs')));
@@ -49,11 +50,11 @@ class _LoginState extends State<Login> {
             child: Container(
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                image:  DecorationImage(
-                  image: AssetImage("assets/hdhouse.png"),
-                  fit: BoxFit.cover,
-                  colorFilter: new ColorFilter.mode(Colors.black12.withOpacity(0.4), BlendMode.dstATop),
-                ),
+                // image:  DecorationImage(
+                //   image: AssetImage("assets/hdhouse.png"),
+                //   fit: BoxFit.cover,
+                //   colorFilter: new ColorFilter.mode(Colors.black12.withOpacity(0.4), BlendMode.dstATop),
+                // ),
                 // color: Colors.white,
               ),
               child: Padding(
@@ -62,29 +63,19 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Header('Login'),
-                    Padding(padding: const EdgeInsets.all(50.0)),
                     Column(
                       children: [
                         Container(
                           padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 1.5,
-                            ),
-                            borderRadius: BorderRadius.circular(40),
-                          ),
                           child: TextFormField(
                             style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 16, fontWeight: FontWeight.bold),
                             controller: _email,
                             decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black, width: 2),
-                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(color: Colors.cyan, width: 1),
+                                borderRadius: BorderRadius.circular(10),
                               ),
                               hintText: "Email",
                               hintStyle: TextStyle(color: Colors.black),
@@ -94,21 +85,12 @@ class _LoginState extends State<Login> {
                         Padding(padding: const EdgeInsets.all(25.0)),
                         Container(
                           padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 1.5,
-                            ),
-                            borderRadius: BorderRadius.circular(100),
-                          ),
                           child: TextFormField(
                             style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 16, fontWeight: FontWeight.bold),
                             controller: _password,
                             decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
                               suffixIcon: IconButton(
                                   color: Colors.black,
                                   icon: Icon(
@@ -120,20 +102,17 @@ class _LoginState extends State<Login> {
                                   }),
                               focusedBorder: OutlineInputBorder(
                                 borderSide:
-                                BorderSide(color: Colors.black, width: 2),
-                                borderRadius: BorderRadius.circular(20),
+                                BorderSide(color: Colors.cyan, width: 1),
+                                borderRadius: BorderRadius.circular(10),
                               ),
                               hintText: "Password",
                               hintStyle: TextStyle(color: Colors.black),
-
-                              // border: InputBorder.none),
                             ),
                             obscureText: !_obscureText,
                           ),
                         )
                       ],
                     ),
-                    Padding(padding: const EdgeInsets.all(40.0)),
                     InkWell(
                       onTap: () {
                         ScaffoldMessenger.of(context)
@@ -159,7 +138,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 60,
                     ),
                 ]),
               ),

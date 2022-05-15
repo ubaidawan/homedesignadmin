@@ -113,12 +113,14 @@ class _CommercialPlotSubmissionState extends State<CommercialPlotSubmission> {
                                           // radius: 55,
                                           // backgroundColor: Color(0xffFDCF09),
                                           child: _image != null
-                                              ? Image.file(
-                                                  _image,
-                                                  width: 100,
-                                                  height: 100,
-                                                  fit: BoxFit.fitHeight,
-                                                )
+                                              ? Expanded(
+                                                child: Image.file(
+                                                    _image,
+                                                    // width: 100,
+                                                    // height: 100,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                              )
                                               : Container(
                                                   decoration: BoxDecoration(
                                                       color: Colors.grey[200],

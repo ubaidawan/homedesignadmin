@@ -6,6 +6,57 @@ import 'Model/CommercialRequestModelData.dart';
 import 'Model/ResidentRequestModelData.dart';
 import 'Model/ResidentialDataModel.dart';
 
+
+
+// billing calculation variables...................................................................
+
+
+int roomcostAluminium = 0;
+int bathroomcostAluminium = 0;
+int hallcostAluminium = 0;
+int kitchencostAluminium = 0;
+int floorcostAluminium = 0;
+int roomcostCement = 0;
+int bathroomcostCement = 0;
+int hallcostCement = 0;
+int kitchencostCement = 0;
+int floorcostCement = 0;
+int roomcostSteel = 0;
+int bathroomcostSteel = 0;
+int hallcostSteel = 0;
+int kitchencostSteel = 0;
+int floorcostSteel = 0;
+int roomcostSand = 0;
+int bathroomcostSand = 0;
+int hallcostSand = 0;
+int kitchencostSand = 0;
+int floorcostSand = 0;
+int roomcostBricks = 0;
+int bathroomcostBricks = 0;
+int hallcostBricks = 0;
+int kitchencostBricks = 0;
+int floorcostBricks = 0;
+int roomcostWood = 0;
+int bathroomcostWood = 0;
+int hallcostWood = 0;
+int kitchencostWood = 0;
+int floorcostWood = 0;
+int roomcostStone = 0;
+int bathroomcostStone = 0;
+int hallcostStone = 0;
+int kitchencostStone = 0;
+int floorcostStone = 0;
+
+int aluminiumcost, brickscost , cementcost , sandcost , steelcost , stonecost , woodcost;
+int totalrooms , totalfloor , totalbathroom , totalkitchen , totalhall;
+int roomcost , floorcost , bathroomcost , kitchencost , hallcost;
+int totalroomcost , totalfloorcost , totalbathroomcost , totalkitchencost , totalhallcost;
+int totalquotation  ;
+  double  labourcost , machinerycost;
+
+
+//..........................................................................................................
+int position;
 List<String> uidlist = [];
 List<ResidentialDataModel> residentialmodellist = [];
 List<CommercialDataModel> commercialmodellist = [];
@@ -29,7 +80,7 @@ String cid,
     sqyard,
     steel,
     stone,
-    timber,
+    wood,
     type,
     name;
 
@@ -82,10 +133,7 @@ Future<void> fetchResidentialDetails()  async {
                 .child("cement")
                 .value
                 .toString(),
-            value.snapshot
-                .child("cost")
-                .value
-                .toString(),
+
             value.snapshot
                 .child("floor")
                 .value
@@ -95,7 +143,11 @@ Future<void> fetchResidentialDetails()  async {
                 .value
                 .toString(),
             value.snapshot
-                .child("image")
+                .child("image1")
+                .value
+                .toString(),
+            value.snapshot
+                .child("image2")
                 .value
                 .toString(),
             value.snapshot
@@ -124,7 +176,7 @@ Future<void> fetchResidentialDetails()  async {
                 .value
                 .toString(),
             value.snapshot
-                .child("timber")
+                .child("wood")
                 .value
                 .toString(),
             value.snapshot
